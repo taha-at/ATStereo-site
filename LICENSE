@@ -1,0 +1,93 @@
+ATStereo Research & Non-Commercial Use License
+Copyright (c) 2026 Abdelrahman Taha. All rights reserved.
+
+1. Definitions
+
+   "Software" means the ATStereo module, this website (ATStereo-site), and
+   their source code, documentation, media assets, and associated content
+   made available by the copyright holder.
+
+   "Non-Commercial Purpose" means personal, academic, research, or
+   educational use that is not primarily intended for or directed towards
+   commercial advantage or monetary compensation.
+
+2. License Grant
+
+   Subject to the terms and conditions of this License, the copyright
+   holder grants you a worldwide, royalty-free, non-exclusive,
+   non-transferable license to use, reproduce, display, modify, and
+   redistribute the Software, in whole or in part, for Non-Commercial
+   Purposes only.
+
+3. Restrictions
+
+   You may NOT:
+
+   a. Use the Software, in whole or in part, for any commercial purpose,
+      including but not limited to selling, licensing, sublicensing,
+      renting, or bundling it with a paid product or service, without the
+      prior written permission of the copyright holder.
+
+   b. Use the Software for the planning, guidance, or performance of any
+      medical procedure on humans or animals. The Software is intended for
+      research and educational purposes only.
+
+   c. Remove, obscure, or alter any copyright, trademark, attribution, or
+      disclaimer notices contained in the Software.
+
+   d. Hold out or imply that the copyright holder endorses you, your use
+      of the Software, or any derived work, except as permitted by this
+      License.
+
+4. Attribution and Citation
+
+   Any redistribution or public use of the Software, or of any substantial
+   portion or derivative work, must retain this License and credit the
+   original author. Academic use must additionally cite the project
+   (see https://github.com/taha-at/ATStereo for the current citation).
+
+5. Medical Disclaimer
+
+   THE SOFTWARE IS A RESEARCH AND EDUCATIONAL TOOL. IT IS NOT CERTIFIED,
+   CLEARED, OR APPROVED AS A MEDICAL DEVICE BY ANY REGULATORY AUTHORITY
+   (INCLUDING THE FDA, EMA, OR OTHERS). THE SOFTWARE MUST NOT BE USED FOR
+   CLINICAL DECISION-MAKING, DIAGNOSIS, TREATMENT PLANNING, OR PATIENT
+   CARE. ALWAYS CONSULT A QUALIFIED HEALTHCARE PROFESSIONAL.
+
+6. Third-Party Components
+
+   This Software is designed for use with 3D Slicer (https://download.slicer.org),
+   which is governed by its own license terms. This License does not grant
+   any rights in third-party software, fonts, or assets.
+
+7. Disclaimer of Warranty
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND
+   NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE
+   LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION
+   OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION
+   WITH THE SOFTWARE OR ITS USE.
+
+8. Limitation of Liability
+
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE
+   COPYRIGHT HOLDER BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+   TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+   PROFITS; OR BUSINESS INTERRUPTION), HOWEVER CAUSED AND ON ANY THEORY OF
+   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+9. Commercial Licensing
+
+   For commercial use, integration, or distribution rights, please contact
+   the copyright holder via https://github.com/taha-at.
+
+10. Termination
+
+    This License terminates automatically upon any breach of Sections 3 or
+    4. Upon termination, you must cease all use and destroy all copies of
+    the Software in your possession.
