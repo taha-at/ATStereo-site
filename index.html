@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATStereo — 3D Slicer Module for Bilateral Stereotactic Trajectory Planning</title>
+  <meta name="description"
+    content="Official download portal and video tutorials for ATStereo: an open-source 3D Slicer extension for bilateral stereotactic frame planning, 4-point fiducial registration, and neurosurgical trajectory kinematics.">
+  <meta name="author" content="Abdelrahman Taha">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ATStereo — 3D Slicer Module for Bilateral Stereotactic Planning">
+  <meta property="og:description"
+    content="Download the ATStereo module and watch step-by-step video tutorials for installation, fiducial registration, and trajectory planning.">
+  <meta property="og:image" content="assets/logo-256.png">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand" aria-label="ATStereo Home">
+        <img src="assets/logo-256.png" alt="ATStereo Logo" class="brand-logo">
+        <span class="brand-text">ATStereo</span>
+        <span class="brand-badge">3D Slicer</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#overview" class="nav-link">Overview</a></li>
+        <li><a href="#downloads" class="nav-link">Downloads</a></li>
+        <li><a href="#tutorial-install" class="nav-link">Video: Setup</a></li>
+        <li><a href="#tutorial-planning" class="nav-link">Video: Planning</a></li>
+        <li><a href="#citation" class="nav-link">Citation</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://github.com/taha-at/ATStereo" target="_blank" rel="noopener noreferrer" class="btn-github">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu">
+        &#9776;
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <a href="https://github.com/taha-at/ATStereo/releases" target="_blank" rel="noopener noreferrer"
+          class="hero-pill" style="text-decoration: none;">
+          <span class="status-indicator"></span>
+          <span>Bilateral Stereotactic Neurosurgery Extension &bull; GitHub Releases</span>
+        </a>
+        <h1 class="hero-title">
+          Precision Bilateral Stereotactic Planning for <span class="highlight-text">3D Slicer</span>
+        </h1>
+        <p class="hero-description">
+          <strong>ATStereo</strong> is a research non-commercial licensed medical software module designed for dual
+          stereotactic frame
+          registration, multi-path trajectory simulation, and real-time kinematic calculations in 3D Slicer.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://github.com/taha-at/ATStereo/releases/latest" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download Latest Release (.zip)</span>
+          </a>
+          <a href="#tutorial-install" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <span>Watch Video Tutorials</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="overview" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clinical Overview</span>
+        <h2 class="section-title">What is ATStereo?</h2>
+        <p class="section-desc">
+          Designed for stereotactic neurosurgery, ATStereo provides end-to-end trajectory planning capabilities within
+          3D Slicer across three core clinical phases.
+        </p>
+      </div>
+
+      <div class="capabilities-grid">
+        <!-- Phase 1: Registration -->
+        <div class="capability-card">
+          <div class="capability-icon blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="22" y1="12" x2="18" y2="12"></line>
+              <line x1="6" y1="12" x2="2" y2="12"></line>
+              <line x1="12" y1="6" x2="12" y2="2"></line>
+              <line x1="12" y1="22" x2="12" y2="18"></line>
+            </svg>
+          </div>
+          <span class="capability-phase">Phase 1: Registration</span>
+          <h3 class="capability-title">4-Point Landmark Alignment</h3>
+          <p class="capability-desc">
+            Aligns the virtual stereotactic coordinate frame directly to patient CT imaging via four anatomical fiducial
+            landmarks with immediate root-mean-square error (RMSE) verification.
+          </p>
+          <ul class="capability-points">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Standardized Isocenter marking order
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Rigid body registration with RMSE feedback
+            </li>
+          </ul>
+        </div>
+
+        <!-- Phase 2: Trajectory Planning -->
+        <div class="capability-card">
+          <div class="capability-icon green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+              <circle cx="5" cy="12" r="2"></circle>
+            </svg>
+          </div>
+          <span class="capability-phase">Phase 2: Trajectory Planning</span>
+          <h3 class="capability-title">Bilateral Trajectory Kinematics</h3>
+          <p class="capability-desc">
+            Simulates simultaneous dual-hemisphere target and entry trajectories, projecting virtual stereotactic
+            cannulas in 3D Slicer and computing physical arc and ring angles.
+          </p>
+          <ul class="capability-points">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Target & entry coordinate computation
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Simultaneous bilateral multi-path planning
+            </li>
+          </ul>
+        </div>
+
+        <!-- Phase 3: Kinematics & Safety -->
+        <div class="capability-card">
+          <div class="capability-icon purple">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <span class="capability-phase">Phase 3: Kinematics & Safety</span>
+          <h3 class="capability-title">Frame Angles & Collision Guard</h3>
+          <p class="capability-desc">
+            Provides real-time mathematical validation of arc and ring orientations, with active proximity monitoring
+            that triggers a safety warning if inter-needle distance drops below 5.0 mm.
+          </p>
+          <ul class="capability-points">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Calculated Arc & Ring angle result table
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Automated collision guard (&lt; 5.0 mm warning)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Center -->
+  <section id="downloads" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Download Center</span>
+        <h2 class="section-title">Get Started with ATStereo</h2>
+        <p class="section-desc">
+          Download the ATStereo module files, install the required 3D Slicer platform, or access test CT imaging data.
+        </p>
+      </div>
+
+      <div class="download-grid">
+        <!-- Card 1: Module -->
+        <div class="download-card highlight">
+          <span class="card-top-tag">Latest Release</span>
+          <div class="card-icon-clean">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3 class="card-title">ATStereo Module</h3>
+          <p class="card-subtitle">
+            Includes the main script <code>ATStereo.py</code>, Qt interface <code>ATStereo.ui</code>, and stereotactic
+            frame 3D models.
+          </p>
+          <ul class="card-specs">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Official GitHub Release package (.zip)
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Includes stereotactic frame STL models
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Bundled sample test CT dataset
+            </li>
+          </ul>
+          <div class="card-actions">
+            <a href="https://github.com/taha-at/ATStereo/releases/latest" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Latest Release (.zip)</span>
+            </a>
+            <a href="https://github.com/taha-at/ATStereo/releases" target="_blank" rel="noopener noreferrer"
+              class="btn btn-secondary btn-sm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              <span>View All Releases & Changelog</span>
+            </a>
+            <a href="https://github.com/taha-at/ATStereo" target="_blank" rel="noopener noreferrer"
+              class="btn btn-secondary btn-sm">
+              <span>View Source on GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: 3D Slicer Platform -->
+        <div class="download-card">
+          <div class="card-icon-clean green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3 class="card-title">3D Slicer</h3>
+          <p class="card-subtitle">
+            The open-source medical visualization and image computing platform required to execute ATStereo.
+          </p>
+
+          <div class="card-actions">
+            <a href="https://download.slicer.org" id="slicer-download-btn" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-blue">
+              <span>Download Slicer</span>
+            </a>
+            <a href="https://slicer.org" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <span>3D Slicer Community & Docs</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Test Dataset -->
+        <div class="download-card">
+          <div class="card-icon-clean purple">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h3 class="card-title">Test CT Dataset</h3>
+          <p class="card-subtitle">
+            Pre-configured patient CT volume to immediately verify fiducial placement and trajectory angles.
+          </p>
+          <ul class="card-specs">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Located in <code>Resources/ctData</code>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              One-click <strong>"Test"</strong> button in ATStereo
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Supports custom NIfTI & DICOM files
+            </li>
+          </ul>
+          <div class="card-actions">
+            <a href="#tutorial-planning" class="btn btn-secondary">
+              <span>View Data Loading Guide</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Tutorial 1: Module Download & Setup -->
+  <section id="tutorial-install" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Video Tutorial #1</span>
+        <h2 class="section-title">Module Download & 3D Slicer Setup</h2>
+        <p class="section-desc">
+          Step-by-step walkthrough on downloading 3D Slicer, extracting the ATStereo module, and adding the module path
+          in settings.
+        </p>
+      </div>
+
+      <div class="video-layout">
+        <!-- Video Player -->
+        <div class="video-column">
+          <div class="video-container">
+            <div class="video-aspect-box" id="video-embed-install">
+              <iframe width="100%" height="100%"
+                src="https://www.youtube-nocookie.com/embed/T5bOguVhoAw?rel=0&modestbranding=1"
+                title="ATStereo - Module Download & 3D Slicer Setup" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accompanying Written Guide -->
+        <div class="video-guide">
+          <div class="guide-step" id="install-step-1">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Install 3D Slicer</h4>
+              <p>Download and install 3D Slicer (v5.12+) from the official website for your operating system.</p>
+              <a href="https://download.slicer.org" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm">
+                Open download.slicer.org &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="guide-step" id="install-step-2">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Download & Extract the Module Folder</h4>
+              <p>Download the ATStereo module zip from the latest GitHub release and extract the folder into a permanent
+                directory on your
+                computer.</p>
+              <a href="https://github.com/taha-at/ATStereo/releases/latest" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm">
+                Get Latest Release (.zip) &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="guide-step" id="install-step-3">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Register Module Path in Slicer</h4>
+              <p>Launch 3D Slicer and navigate through the top menu:</p>
+              <div class="step-code-inline">
+                <span>Edit &rarr; Application Settings &rarr; Modules</span>
+              </div>
+              <p style="margin-top: 0.4rem;">In <strong>Additional module paths</strong>, click
+                <strong>Add</strong> and select your extracted <code>ATStereo</code> directory.
+              </p>
+            </div>
+          </div>
+
+          <div class="guide-step" id="install-step-4">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>Restart & Search for ATStereo</h4>
+              <p>Restart 3D Slicer. In the module search bar at the top, type <code>ATStereo</code> and click to
+                open the interface.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Tutorial 2: Fiducial Registration & Trajectory Planning -->
+  <section id="tutorial-planning" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Video Tutorial #2</span>
+        <h2 class="section-title">Fiducial Registration & Trajectory Planning</h2>
+        <p class="section-desc">
+          Complete surgical workflow: loading patient CT imaging, marking the 4 fiducial points, rigid body
+          registration, and bilateral trajectory planning.
+        </p>
+      </div>
+
+      <div class="video-layout">
+        <!-- Video Player Column -->
+        <div class="video-column">
+          <div class="video-container">
+            <div class="video-aspect-box" id="video-embed-planning">
+              <iframe width="100%" height="100%"
+                src="https://www.youtube-nocookie.com/embed/YfL94Eq0l3o?rel=0&modestbranding=1"
+                title="ATStereo - Fiducial Registration & Trajectory Planning" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <!-- 4-Point Sequence Reference Card -->
+          <div class="fiducial-card">
+            <div class="fiducial-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span>Crucial: Exact 4-Point Marking Order</span>
+            </div>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 0.85rem;">
+              When clicking <strong>"Step 1: Pick 4 points"</strong> in the ATStereo Workflow tab, mark the anatomical
+              landmarks in this strict sequence:
+            </p>
+            <div class="fiducial-points-list">
+              <div class="fiducial-item">
+                <span class="fiducial-marker">1</span>
+                <div>
+                  <div class="fiducial-name">Left Isocenter</div>
+                  <div class="fiducial-coord">Marker Point 1</div>
+                </div>
+              </div>
+              <div class="fiducial-item">
+                <span class="fiducial-marker">2</span>
+                <div>
+                  <div class="fiducial-name">Right Isocenter</div>
+                  <div class="fiducial-coord">Marker Point 2</div>
+                </div>
+              </div>
+              <div class="fiducial-item">
+                <span class="fiducial-marker">3</span>
+                <div>
+                  <div class="fiducial-name">Left Point</div>
+                  <div class="fiducial-coord">(0, 0, 120 mm)</div>
+                </div>
+              </div>
+              <div class="fiducial-item">
+                <span class="fiducial-marker">4</span>
+                <div>
+                  <div class="fiducial-name">Right Point</div>
+                  <div class="fiducial-coord">(0, 0, 120 mm)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accompanying Written Guide -->
+        <div class="video-guide">
+          <div class="guide-step" id="plan-step-1">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Load Volume & Show 3D</h4>
+              <p>In the <strong>Data Import</strong> section, load your NIfTI (<code>.nii</code> /
+                <code>.nii.gz</code>) or DICOM dataset, or click <strong>Test</strong>. Click <strong>Show 3D</strong>
+                to render.
+              </p>
+            </div>
+          </div>
+
+          <div class="guide-step" id="plan-step-2">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Pick the 4 Fiducial Points</h4>
+              <p>Click <strong>Step 1: Pick 4 points</strong>. Place the 4 landmarks on the slice or 3D view following
+                the Left/Right isocenter order shown on the left.</p>
+            </div>
+          </div>
+
+          <div class="guide-step" id="plan-step-3">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Align to Isocenters & Check RMSE</h4>
+              <p>Click <strong>Step 2: Align to Isocenters</strong>. The algorithm aligns the virtual frame
+                coordinates to the patient anatomy. Verify the popup RMSE registration error in millimeters (e.g. 0.4
+                mm).</p>
+            </div>
+          </div>
+
+          <div class="guide-step" id="plan-step-4">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>Set Target & Entry Coordinates</h4>
+              <p>Sequentially click:</p>
+              <ul style="font-size: 0.85rem; color: var(--text-secondary); margin-left: 1.2rem; margin-top: 0.25rem;">
+                <li><strong>Step 3 & 4:</strong> Left Target & Left Entry (or Right Side)</li>
+                <li><strong>Step 5 & 6:</strong> Set opposing side target & entry points</li>
+              </ul>
+              <p style="margin-top: 0.4rem;">The module computes the stereotactic trajectory line through the skull
+                and brain.</p>
+            </div>
+          </div>
+
+          <div class="guide-step" id="plan-step-5">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <h4>3D Frame Kinematics & Arc Angles</h4>
+              <p>Inspect the computed <strong>Result Table</strong>: Local X, Y, Z coordinates, Arc Angle, and Ring
+                Angle (e.g. Arc: 8.29°, Ring: 27.22°). Click <strong>Visualize Frame</strong> to verify physical arc
+                alignment in the 3D viewport.</p>
+
+              <div class="alert-box" style="margin-top: 0.85rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <div class="alert-box-text">
+                  <strong>Safety Note:</strong> ATStereo also automatically monitors inter-needle distance (&lt; 5.0 mm
+                  collision guard) whenever dual bilateral trajectories are loaded.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Citation Section -->
+  <section id="citation" class="section section-alt">
+    <div class="container">
+      <div class="citation-card">
+        <div class="citation-header">
+          <h3 class="citation-title">Academic Citation</h3>
+          <button class="btn btn-secondary btn-sm" data-copy="@article{taha2026atstereo,
+  title={ATStereo: A 3D Slicer Extension for Bilateral Stereotactic Neurosurgical Planning and Kinematics},
+  author={Taha, Abdelrahman},
+  year={2026},
+  url={https://github.com/taha-at/ATStereo}
+}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy BibTeX</span>
+          </button>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">
+          If you use ATStereo in your research, surgical simulations, or publications, please cite the project:
+        </p>
+        <div class="bibtex-box">@article{taha2026atstereo,
+          title={ATStereo: A 3D Slicer Extension for Bilateral Stereotactic Neurosurgical Planning and Kinematics},
+          author={Taha, Abdelrahman},
+          year={2026},
+          url={https://github.com/taha-at/ATStereo}
+          }</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="assets/logo-256.png" alt="ATStereo"
+            style="width: 26px; height: 26px; border-radius: 4px; border: 1px solid #e2e8f0;">
+          <span style="font-weight: 700; font-size: 1.05rem; color: var(--text-primary);">ATStereo</span>
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#downloads">Downloads</a></li>
+          <li><a href="#tutorial-install">Setup Video</a></li>
+          <li><a href="#tutorial-planning">Planning Video</a></li>
+          <li><a href="#citation">Citation</a></li>
+          <li><a href="https://github.com/taha-at/ATStereo/releases" target="_blank"
+              rel="noopener noreferrer">Releases</a></li>
+          <li><a href="https://github.com/taha-at/ATStereo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://download.slicer.org" target="_blank" rel="noopener noreferrer">3D Slicer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Abdelrahman Taha. Released under research and non-commercial use license.</div>
+        <div>Built for 3D Slicer medical image computing.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
