@@ -99,16 +99,26 @@ function initMobileMenu() {
   const header = document.querySelector('.site-header');
 
   if (toggle && header) {
+    const setMenuState = (isOpen) => {
+      header.classList.toggle('mobile-menu-active', isOpen);
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    };
+
     toggle.addEventListener('click', () => {
-      header.classList.toggle('mobile-menu-active');
+      setMenuState(!header.classList.contains('mobile-menu-active'));
     });
 
     // Close mobile menu when a nav link is clicked
     const navLinks = header.querySelectorAll('.nav-link, .btn-github');
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        header.classList.remove('mobile-menu-active');
-      });
+      link.addEventListener('click', () => setMenuState(false));
+    });
+
+    // Close the menu with the Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && header.classList.contains('mobile-menu-active')) {
+        setMenuState(false);
+      }
     });
   }
 }
